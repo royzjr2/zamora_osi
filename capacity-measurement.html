@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<title>Campus Capacity Measurement — Working Framework</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.dim{background:var(--white);border:1px solid var(--line);border-radius:var(--r);margin-bottom:1rem;overflow:hidden}
+.dim-h{padding:1.1rem 1.3rem;border-left:5px solid var(--navy);display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:baseline;justify-content:space-between}
+.dim.f2 .dim-h{border-left-color:var(--blue)}
+.dim.f3 .dim-h{border-left-color:var(--gold)}
+.dim-h h4{font-family:var(--disp);font-weight:500;font-size:18px;color:var(--navy-deep);margin:0}
+.dim-h .pts{font-family:var(--cond);font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-mute)}
+.dim-note{padding:0 1.3rem 1rem;font-size:13px;color:var(--ink-soft);line-height:1.65;border-left:5px solid var(--navy)}
+.dim.f2 .dim-note{border-left-color:var(--blue)}
+.dim.f3 .dim-note{border-left-color:var(--gold)}
+.ind{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-top:1px solid var(--line)}
+.ind-c{background:#fafcfd;padding:1rem 1.3rem}
+.ind-c h5{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:.35rem}
+.ind-c p{font-size:12.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:.6rem}
+.score{font-family:var(--cond);font-size:11.5px;line-height:1.7;color:var(--ink)}
+.score b{color:var(--navy-deep)}
+.score-k{font-family:var(--cond);font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:.25rem}
+
+.bands{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:var(--r);overflow:hidden;margin:1.5rem 0;border:1px solid var(--line)}
+.band-c{padding:1.15rem 1.2rem;text-align:center}
+.band-c.b1{background:#e8edf1}
+.band-c.b2{background:var(--blue)}
+.band-c.b3{background:var(--navy-deep)}
+.band-c .rng{font-family:var(--disp);font-weight:600;font-size:24px;line-height:1;margin-bottom:.3rem}
+.b1 .rng{color:var(--ink-soft)}.b2 .rng{color:var(--navy-deep)}.b3 .rng{color:#fff}
+.band-c .nm{font-size:12.5px;font-weight:700;margin-bottom:.25rem}
+.b1 .nm{color:var(--navy)}.b2 .nm{color:var(--navy-deep)}.b3 .nm{color:#fff}
+.band-c .pct{font-size:11.5px}
+.b1 .pct{color:var(--ink-mute)}.b2 .pct{color:#013a5c}.b3 .pct{color:#8ab4cc}
+
+.use{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:.9rem;margin:1.5rem 0}
+.use-c{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:8px;padding:1.15rem 1.2rem}
+.use-c h5{font-size:13.5px;font-weight:700;color:var(--navy-deep);margin-bottom:.45rem;line-height:1.3}
+.use-c p{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+
+.evid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin:1.4rem 0}
+.evid-c{background:var(--navy-deep);border-radius:8px;padding:1rem;text-align:center}
+.evid-n{font-family:var(--disp);font-weight:600;font-size:21px;color:var(--blue);line-height:1.1;margin-bottom:.3rem}
+.evid-l{font-size:11px;color:#a8c4d6;line-height:1.4}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="nav-brand">Organizational Strategy &amp; Impact<span>Irving ISD · Working Framework</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="portfolio-capacity.html">Portfolio</a></li>
+      <li><a href="organizational-health.html">Org Health</a></li>
+      <li><a href="capacity-measurement.html" aria-current="page">Campus Capacity</a></li>
+      <li><a href="effectiveness-model.html">Effectiveness</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="eyebrow">Domain 05 · Deep dive</div>
+    <h1>Campus Capacity <em>Measurement</em></h1>
+    <p class="hero-sub">A validated 0–100 measure of school organizational capacity, built entirely from data Texas districts already report. It makes visible the thing accountability ratings cannot show: whether a campus has the organizational conditions to sustain improvement. Irving campuses are already scored within the statewide panel.</p>
+    <div class="hero-meta">
+      <span class="pill solid">Validated instrument</span>
+      <span class="pill">No new data collection</span>
+      <span class="pill gold">Irving panel computed · 2017–2023</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="sec">
+  <div class="wrap">
+    <a class="backlink" href="index.html">← Back to overview</a>
+
+    <div class="toc">
+      <div class="toc-k">In this section</div>
+      <ol>
+        <li><a href="#why">The gap this fills</a></li>
+        <li><a href="#construction">How the index is built</a></li>
+        <li><a href="#bands">Readiness levels</a></li>
+        <li><a href="#evidence">Validation evidence</a></li>
+        <li><a href="#irving">What it would do for Irving</a></li>
+        <li><a href="#limits">Limits and honest caveats</a></li>
+      </ol>
+    </div>
+
+    <div class="prose">
+      <p class="lede">A district can see how its campuses perform. It generally cannot see whether they are <em>built to keep performing</em>. Accountability ratings report outcomes. They say nothing about whether a campus has the organizational memory, professional standardization, and leadership continuity that make those outcomes reproducible — or whether a rating was carried by a single strong cohort and is about to fall.</p>
+
+      <h3 id="why">I. The gap this fills</h3>
+
+      <p>Two campuses can hold the same rating for entirely different reasons. One has a stable principal, a majority of experienced teachers, and low turnover. The other has a first-year principal, a teaching staff that turns over annually, and results that will not survive the next departure. Outcome data treats them identically. Every practical decision a district makes — where to send students during consolidation, where to direct support, which campuses can absorb change — treats them very differently, or should.</p>
+
+      <div class="callout">
+        <div class="k">The instrument</div>
+        <p>The Campus Capacity Index is a formative composite scored 0–100 from <strong>six indicators across three theoretical dimensions</strong>. It was developed and validated against 48,620 Texas campus-year observations spanning 8,605 campuses and seven academic years, using only publicly reported administrative data.</p>
+      </div>
+
+      <p>Because it is <strong>formative</strong>, the six indicators combine to produce capacity rather than reflecting one underlying trait. A campus with experienced teachers but constant principal turnover genuinely has different capacity than one with the reverse. The indicators are contributors, not substitutes — which is why the measure is judged on whether it predicts what schools care about, not on whether its items correlate with one another.</p>
+
+      <h3 id="construction">II. How the index is built</h3>
+      <p>Each dimension carries three points across two indicators — one measuring level, one measuring equity of distribution. That second indicator matters more than it first appears: it asks not just whether a district has capacity, but whether it distributes it fairly across its own campuses.</p>
+    </div>
+
+    <div class="dim f1">
+      <div class="dim-h"><h4>Experience</h4><span class="pts">Factor 1 · 2 indicators · 0–3 pts · strongest predictor</span></div>
+      <div class="dim-note">Organizational memory and institutional knowledge. When experienced educators are a majority, embodied routines reproduce effective practice and transmit it to newer staff.</div>
+      <div class="ind">
+        <div class="ind-c">
+          <h5>Experience concentration</h5>
+          <p>Proportion of teachers with five or more years of experience — the threshold where effectiveness gains largely level off.</p>
+          <div class="score"><span class="score-k">Scoring · 0–2 pts</span><b>2</b> · ≥85% experienced<br><b>1</b> · 70–84.99%<br><b>0</b> · &lt;70%</div>
+        </div>
+        <div class="ind-c">
+          <h5>Experience distribution</h5>
+          <p>Whether the campus avoids concentrating inexperienced teachers relative to the rest of its district.</p>
+          <div class="score"><span class="score-k">Scoring · 0–1 pt</span><b>1</b> · % inexperienced below district average<br><b>0</b> · at or above district average</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dim f2">
+      <div class="dim-h"><h4>Credentials</h4><span class="pts">Factor 2 · 2 indicators · 0–3 pts</span></div>
+      <div class="dim-note">Professional standardization. Credentials function as both technical qualification and institutional signal, creating mechanisms that maintain legitimacy and consistency.</div>
+      <div class="ind">
+        <div class="ind-c">
+          <h5>Credential quality</h5>
+          <p>Proportion of teachers fully credentialed, identified through degree status combined with compensation patterns.</p>
+          <div class="score"><span class="score-k">Scoring · 0–2 pts</span><b>2</b> · ≥95% fully credentialed<br><b>1</b> · 90–94.99%<br><b>0</b> · &lt;90%</div>
+        </div>
+        <div class="ind-c">
+          <h5>Credential distribution</h5>
+          <p>Whether credentialed staff are distributed evenly across campuses rather than concentrated in a few.</p>
+          <div class="score"><span class="score-k">Scoring · 0–1 pt</span><b>1</b> · % credentialed exceeds district average<br><b>0</b> · at or below district average</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dim f3">
+      <div class="dim-h"><h4>Organizational stability</h4><span class="pts">Factor 3 · 2 indicators · 0–3 pts</span></div>
+      <div class="dim-note">Persistence and routinization. Leadership continuity and staff retention create the conditions under which trust develops and improvement initiatives actually embed rather than restart.</div>
+      <div class="ind">
+        <div class="ind-c">
+          <h5>Principal tenure</h5>
+          <p>Leadership stability measured by tenure at the current campus and total administrative experience, constructed longitudinally.</p>
+          <div class="score"><span class="score-k">Scoring · 0–2 pts</span><b>2</b> · 3+ yrs at campus OR 8+ yrs total<br><b>1</b> · 2 yrs at campus OR 5–7 yrs total<br><b>0</b> · &lt;2 yrs and &lt;5 yrs total</div>
+        </div>
+        <div class="ind-c">
+          <h5>Teacher retention</h5>
+          <p>Year-over-year deviation in average teacher experience flags atypical turnover. Normal variation sits within roughly half a year.</p>
+          <div class="score"><span class="score-k">Scoring · 0–1 pt</span><b>1</b> · change &lt;0.75 yrs (stable)<br><b>0</b> · change ≥0.75 yrs (elevated turnover)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3 id="bands">III. Readiness levels</h3>
+      <p>Scores map to three organizational readiness levels. Statewide distribution across the validation sample:</p>
+    </div>
+
+    <div class="bands">
+      <div class="band-c b1"><div class="rng">0–49</div><div class="nm">Minimal</div><div class="pct">39.2% of campuses</div></div>
+      <div class="band-c b2"><div class="rng">50–69</div><div class="nm">Moderate</div><div class="pct">41.3% of campuses</div></div>
+      <div class="band-c b3"><div class="rng">70–100</div><div class="nm">Optimal</div><div class="pct">19.4% of campuses</div></div>
+    </div>
+
+    <div class="prose">
+      <p>Statewide mean is 55.29 with a standard deviation of 19.32. Roughly two in five Texas campuses sit in the minimal band — which is itself a finding worth sitting with. Organizational capacity is scarce, and experience concentration is the scarcest component of it.</p>
+
+      <h3 id="evidence">IV. Validation evidence</h3>
+    </div>
+
+    <div class="evid">
+      <div class="evid-c"><div class="evid-n">48,620</div><div class="evid-l">Campus-year observations, 2017–2023</div></div>
+      <div class="evid-c"><div class="evid-n">8,605</div><div class="evid-l">Unique Texas campuses, all 20 ESC regions</div></div>
+      <div class="evid-c"><div class="evid-n">+4.67pp</div><div class="evid-l">Math advantage, Optimal vs. Minimal</div></div>
+      <div class="evid-c"><div class="evid-n">+3.39pp</div><div class="evid-l">Reading advantage, Optimal vs. Minimal</div></div>
+    </div>
+
+    <div class="prose">
+      <p>Validity rests on criterion performance and on whether organizational profiles occurring naturally in the data align with the index's categories. Latent class analysis agrees with CCI readiness levels on 58 to 64 percent of campuses. Associations with achievement hold under district fixed effects — meaning capacity differences matter <strong>even among campuses operating under the same district policies and resource constraints</strong>, which is precisely the comparison a district cares about.</p>
+
+      <div class="callout gold">
+        <div class="k">The finding that matters most operationally</div>
+        <p>Teacher experience concentration is the strongest predictor across every specification tested. Strategic concentration of experienced teachers outperforms spreading them thin. That is a direct, testable claim about how a district should staff — and it runs against the instinct to distribute strong teachers evenly across every campus.</p>
+      </div>
+
+      <h3 id="irving">V. What it would do for Irving</h3>
+      <p>The index is not an academic exercise here. It produces criteria for decisions this district is going to make regardless.</p>
+    </div>
+
+    <div class="use">
+      <div class="use-c">
+        <h5>A defensible receiving-campus criterion</h5>
+        <p>When students move between campuses, the receiving campus should have the organizational conditions to absorb them. Physical space is the easy test. Capacity is the real one — and a published index gives the district a criterion it can defend publicly rather than an assertion it has to argue.</p>
+      </div>
+      <div class="use-c">
+        <h5>Equity that is measured, not asserted</h5>
+        <p>Two of the six indicators measure whether the district concentrates inexperienced or uncredentialed teachers at particular campuses. That is an internal equity question most districts never quantify, and it is answerable today from data already reported.</p>
+      </div>
+      <div class="use-c">
+        <h5>Early warning ahead of accountability</h5>
+        <p>Capacity predicts achievement. A campus whose capacity is eroding — leadership turnover, experience loss — is signaling a rating problem well before the rating arrives. That is a support-targeting window most districts miss entirely.</p>
+      </div>
+      <div class="use-c">
+        <h5>A capacity lens on Strategic Compensation</h5>
+        <p>Performance-based compensation appears to raise achievement substantially <em>through</em> organizational capacity development rather than through incentive effects alone. If that mechanism holds, capacity is the intermediate outcome a district should be tracking to know whether its compensation program is working.</p>
+      </div>
+      <div class="use-c">
+        <h5>Staffing structure, grounded</h5>
+        <p>The experience concentration finding gives a tiered career structure an empirical foundation. Placement decisions during any reconfiguration can be governed by what demonstrably builds capacity rather than by seniority alone.</p>
+      </div>
+      <div class="use-c">
+        <h5>Trend without new burden</h5>
+        <p>Built from data the district already reports, and already computed. A seven-year capacity trend line exists for every Irving campus right now — no new survey, form, or data request required to begin.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h4>Irving is already in the panel</h4>
+      <p>Because the index was built from statewide administrative data covering every Texas campus across seven years, <strong>Irving campuses are already scored.</strong> What follows is computed from that panel: 37 campuses, 247 campus-year observations, 2017–18 through 2023–24.</p>
+    </div>
+
+    <div class="evid">
+      <div class="evid-c"><div class="evid-n">53.7</div><div class="evid-l">Irving 7-yr mean CCI<br>statewide 55.29</div></div>
+      <div class="evid-c"><div class="evid-n">83.3%</div><div class="evid-l">Mean economically disadvantaged<br>statewide sample 63.6%</div></div>
+      <div class="evid-c"><div class="evid-n">8.9%</div><div class="evid-l">Experience concentration<br>as share of maximum</div></div>
+      <div class="evid-c"><div class="evid-n">48.6%</div><div class="evid-l">Campuses in Minimal band, 2024<br>statewide 39.2%</div></div>
+    </div>
+
+    <div class="prose">
+      <p>Irving sits marginally below the state mean while serving a student population roughly twenty points more economically disadvantaged than the validation sample. That context matters and should be stated whenever these figures are presented.</p>
+
+      <h4>The finding that should drive everything else</h4>
+
+      <p><strong>Experience concentration is at 8.9 percent of maximum.</strong> In 206 of 247 campus-year observations — 83 percent — an Irving campus scored zero points, meaning fewer than 70 percent of its teachers had five or more years of experience. Across seven years and 37 campuses, exactly one campus ever reached the top band.</p>
+
+      <div class="callout gold">
+        <div class="k">Why this is the headline</div>
+        <p>Experience concentration is the <strong>strongest predictor of achievement</strong> across every specification in the statewide validation. It is the single capacity component where Irving is closest to the floor. If the district changes one thing about how it builds organizational capacity, the evidence says it should be this.</p>
+      </div>
+
+      <p>The companion indicator tells a second story. Experience <em>distribution</em> — whether a campus avoids concentrating inexperienced teachers relative to district average — sits at 49 percent and has been essentially flat for seven years. Roughly half of Irving campuses carry a higher share of inexperienced teachers than the district average, and the pattern has not moved. That is an internal equity question the district can answer today.</p>
+
+      <h4>Seven years: real gains, then erosion</h4>
+    </div>
+
+    <div class="viz">
+      <div class="viz-head">
+        <div class="viz-title">District mean CCI, 2018–2024</div>
+        <div class="viz-note">37 campuses · 247 campus-year observations</div>
+      </div>
+      <svg viewBox="0 0 700 260" style="width:100%;height:auto" role="img" aria-label="Irving district mean CCI by year, rising from 45.6 in 2018 to 59.7 in 2022 then declining to 54.3 in 2024">
+        <line x1="52" y1="40" x2="680" y2="40" stroke="#dce4ec"/>
+        <line x1="52" y1="90" x2="680" y2="90" stroke="#dce4ec"/>
+        <line x1="52" y1="140" x2="680" y2="140" stroke="#dce4ec"/>
+        <line x1="52" y1="190" x2="680" y2="190" stroke="#dce4ec"/>
+        <text x="44" y="44" text-anchor="end" font-size="11" fill="#6b7c88">65</text>
+        <text x="44" y="94" text-anchor="end" font-size="11" fill="#6b7c88">55</text>
+        <text x="44" y="144" text-anchor="end" font-size="11" fill="#6b7c88">45</text>
+        <text x="44" y="194" text-anchor="end" font-size="11" fill="#6b7c88">35</text>
+        <line x1="52" y1="90" x2="680" y2="90" stroke="#b3b5b8" stroke-dasharray="4 4"/>
+        <text x="676" y="83" text-anchor="end" font-size="10" fill="#6b7c88" font-style="italic">statewide mean 55.29</text>
+        <polyline points="90,131 188,100 286,86 384,69 482,61 580,101 678,90" fill="none" stroke="#004d7c" stroke-width="3"/>
+        <circle cx="90" cy="131" r="5" fill="#004d7c"/><circle cx="188" cy="100" r="5" fill="#004d7c"/>
+        <circle cx="286" cy="86" r="5" fill="#004d7c"/><circle cx="384" cy="69" r="5" fill="#004d7c"/>
+        <circle cx="482" cy="61" r="6" fill="#f3c63c" stroke="#004d7c" stroke-width="2"/>
+        <circle cx="580" cy="101" r="5" fill="#004d7c"/><circle cx="678" cy="90" r="5" fill="#004d7c"/>
+        <text x="90" y="117" text-anchor="middle" font-size="11" font-weight="700" fill="#004d7c">45.6</text>
+        <text x="482" y="47" text-anchor="middle" font-size="11" font-weight="700" fill="#004d7c">59.7</text>
+        <text x="678" y="76" text-anchor="middle" font-size="11" font-weight="700" fill="#004d7c">54.3</text>
+        <text x="90" y="225" text-anchor="middle" font-size="11" fill="#6b7c88">2018</text>
+        <text x="188" y="225" text-anchor="middle" font-size="11" fill="#6b7c88">2019</text>
+        <text x="286" y="225" text-anchor="middle" font-size="11" fill="#6b7c88">2020</text>
+        <text x="384" y="225" text-anchor="middle" font-size="11" fill="#6b7c88">2021</text>
+        <text x="482" y="225" text-anchor="middle" font-size="11" fill="#6b7c88">2022</text>
+        <text x="580" y="225" text-anchor="middle" font-size="11" fill="#6b7c88">2023</text>
+        <text x="678" y="225" text-anchor="middle" font-size="11" fill="#6b7c88">2024</text>
+      </svg>
+    </div>
+
+    <div class="prose">
+      <p>Irving gained 14.1 points of organizational capacity between 2018 and 2022, then gave back 5.4 of them. The rise was driven almost entirely by <strong>leadership stability</strong> — principal tenure moved from 23 percent of maximum in 2018 to 73 percent in 2022, the largest movement of any indicator in the panel. Teacher retention improved alongside it.</p>
+
+      <p>The share of campuses in the Minimal band fell from 62.9 percent to 34.3 percent over that window, then climbed back to 48.6 percent by 2024. Whatever produced the improvement was real and was not sustained.</p>
+
+      <div class="callout">
+        <div class="k">The operational read</div>
+        <p>Capacity in Irving is <strong>volatile rather than structurally low</strong>. The district demonstrated it can move these numbers — substantially, within four years, through leadership continuity. The 2023 decline suggests the gains depended on conditions that were not locked in. Understanding what changed is a first-year question worth answering precisely.</p>
+      </div>
+
+      <h4>Where Irving stands on each component</h4>
+    </div>
+
+    <div class="viz">
+      <div class="viz-head"><div class="viz-title">Indicator performance, share of maximum · all years</div></div>
+      <svg viewBox="0 0 700 250" style="width:100%;height:auto" role="img" aria-label="Bar chart of six indicator scores as share of maximum">
+        <g font-size="12" fill="#1c2b36">
+          <text x="0" y="24">Credential quality</text>
+          <rect x="200" y="12" width="378" height="16" fill="#40acd2"/><text x="588" y="24" font-weight="700" fill="#004d7c">78.7%</text>
+          <text x="0" y="60">Teacher retention</text>
+          <rect x="200" y="48" width="358" height="16" fill="#40acd2"/><text x="568" y="60" font-weight="700" fill="#004d7c">74.5%</text>
+          <text x="0" y="96">Credential distribution</text>
+          <rect x="200" y="84" width="330" height="16" fill="#40acd2"/><text x="540" y="96" font-weight="700" fill="#004d7c">68.8%</text>
+          <text x="0" y="132">Principal tenure</text>
+          <rect x="200" y="120" width="277" height="16" fill="#004d7c"/><text x="487" y="132" font-weight="700" fill="#004d7c">57.7%</text>
+          <text x="0" y="168">Experience distribution</text>
+          <rect x="200" y="156" width="237" height="16" fill="#004d7c"/><text x="447" y="168" font-weight="700" fill="#004d7c">49.4%</text>
+          <text x="0" y="204" font-weight="700">Experience concentration</text>
+          <rect x="200" y="192" width="43" height="16" fill="#de1f34"/><text x="253" y="204" font-weight="700" fill="#de1f34">8.9%</text>
+          <line x1="200" y1="222" x2="680" y2="222" stroke="#dce4ec"/>
+          <text x="200" y="240" font-size="10" fill="#6b7c88">0%</text>
+          <text x="680" y="240" font-size="10" fill="#6b7c88" text-anchor="end">100% of maximum</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="prose">
+      <p>Credentialing is not Irving's problem. Retention is reasonable. Leadership stability is mid-range and improving. The capacity constraint is concentrated almost entirely in one place, and it is the place the evidence says matters most.</p>
+
+      <h4>An honest complication</h4>
+
+      <p>Within Irving alone, the correlation between campus CCI and student achievement is approximately zero. This should be said plainly rather than omitted.</p>
+
+      <p>There are defensible reasons — 37 campuses is a small panel, capacity variance within a single district is compressed relative to the statewide range, and Irving's campuses are uniformly high-poverty, which removes much of the variation the statewide models exploit. The statewide relationship holds under district fixed effects, meaning it survives comparison of campuses inside the same district when pooled across more than a thousand districts. It does not follow that it will appear inside any one of them.</p>
+
+      <div class="callout">
+        <div class="k">What that means practically</div>
+        <p>The index should be used in Irving as a <strong>measure of organizational condition</strong> — is a campus stable, experienced, credentialed, led continuously — rather than as a predictor of next year's ratings. That is still the more useful thing to know when deciding where students can be absorbed, where support belongs, and whether improvement has anything to stand on.</p>
+      </div>
+
+      <h4>A note on the compensation data</h4>
+      <p>The panel carries Irving's Teacher Incentive Allotment status through 2023–24, which shows no district approval recorded in that window. That status may have changed since, and confirming it is an early-conversation item rather than a finding.</p>
+
+      <h3 id="limits">VI. Limits and honest caveats</h3>
+      <ul>
+        <li><strong>Some indicators are proxies.</strong> Certification status is inferred partly from compensation patterns rather than measured directly. Turnover is inferred from year-over-year experience deviation rather than observed exits.</li>
+        <li><strong>The associations are conditional, not causal.</strong> The index predicts achievement; it does not establish that raising a score causes achievement to rise.</li>
+        <li><strong>It measures organizational conditions, not instruction.</strong> A high-capacity campus is better positioned to sustain good teaching. It is not evidence that good teaching is occurring.</li>
+        <li><strong>It should inform decisions, not make them.</strong> Any index used mechanically will eventually produce a defensible number and an indefensible decision. This one belongs alongside judgment, not in place of it.</li>
+      </ul>
+
+      <div class="callout">
+        <div class="k">Why it belongs in this seat</div>
+        <p>Capacity measurement connects directly to portfolio decisions, staffing structure, compensation design, and campus support targeting. Those threads sit in four different departments today. The value of measuring capacity is realized only where someone is accountable for all four at once.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-note foot-close">A district can see how its campuses perform. Knowing whether they are built to keep performing is a different question.</p>
+  </div>
+</footer>
+
+</body>
+</html>

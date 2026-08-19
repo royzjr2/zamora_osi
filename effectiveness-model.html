@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<title>District Effectiveness Model — Working Framework</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.gap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin:1.6rem 0}
+.gap-c{padding:1.2rem 1.15rem}
+.gap-c.g1,.gap-c.g2{background:var(--white);border-right:1px solid var(--line)}
+.gap-c.g3{background:#fff8e6}
+.gap-who{font-family:var(--cond);font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--blue);margin-bottom:.45rem}
+.gap-c.g3 .gap-who{color:#b8860b}
+.gap-c h5{font-size:13.5px;font-weight:700;color:var(--navy-deep);margin-bottom:.4rem;line-height:1.3}
+.gap-c p{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+.cascade{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem;margin:1.6rem 0;box-shadow:var(--shadow)}
+.casc-row{display:flex;align-items:center;gap:.75rem;padding:.7rem 0;border-bottom:1px dashed var(--line)}
+.casc-row:last-child{border-bottom:none}
+.casc-lvl{font-family:var(--cond);font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#fff;background:var(--navy);padding:4px 9px;border-radius:4px;min-width:74px;text-align:center;flex:none}
+.casc-row.r2 .casc-lvl{background:#1a6392}
+.casc-row.r3 .casc-lvl{background:var(--blue);color:var(--navy-deep)}
+.casc-row.r4 .casc-lvl{background:#c98a99;color:#4a1220}
+.casc-t{font-size:13px;color:var(--ink);line-height:1.5}
+.casc-t b{color:var(--navy-deep)}
+.pr{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.85rem;margin:1.5rem 0}
+.pr-c{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:8px;padding:1.05rem 1.15rem}
+.pr-c h5{font-size:13px;font-weight:700;color:var(--navy-deep);margin-bottom:.4rem}
+.pr-c p{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+.risk{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:1.05rem 1.2rem;margin-bottom:.75rem;border-left:4px solid var(--crimson)}
+.risk h5{font-size:13px;font-weight:700;color:var(--crimson);margin-bottom:.35rem}
+.risk p{font-size:12.8px;color:var(--ink-soft);line-height:1.62}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="nav-brand">Organizational Strategy &amp; Impact<span>Irving ISD · Working Framework</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="portfolio-capacity.html">Portfolio</a></li>
+      <li><a href="organizational-health.html">Org Health</a></li>
+      <li><a href="capacity-measurement.html">Campus Capacity</a></li>
+      <li><a href="effectiveness-model.html" aria-current="page">Effectiveness</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="eyebrow">Domain 06 · Deep dive</div>
+    <h1>District <em>Effectiveness Model</em></h1>
+    <p class="hero-sub">A district measures its campuses closely and its central office loosely. Closing that asymmetry is both a compliance question and a credibility one — and it is the piece most likely to change how central office and campuses regard one another.</p>
+    <div class="hero-meta">
+      <span class="pill solid">Conceptual</span>
+      <span class="pill">For shaping, not adoption</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="sec">
+  <div class="wrap">
+    <a class="backlink" href="index.html">← Back to overview</a>
+
+    <div class="toc">
+      <div class="toc-k">In this section</div>
+      <ol>
+        <li><a href="#asym">The asymmetry</a></li>
+        <li><a href="#compliance">What policy already asks for</a></li>
+        <li><a href="#shape">What a model would need to do</a></li>
+        <li><a href="#cascade">One way it could work</a></li>
+        <li><a href="#risks">Where this gets hard</a></li>
+        <li><a href="#posture">How I would introduce it</a></li>
+      </ol>
+    </div>
+
+    <div class="prose">
+      <div class="callout gold">
+        <div class="k">How to read this section</div>
+        <p>This is an informed starting point, not a specification. The thinking here has developed over several years and the underlying research is stable, but any real version would be built collaboratively with Cabinet, the Chief of Staff, and the Board rather than imported intact. <strong>What follows is intended to be argued with.</strong></p>
+      </div>
+
+      <p class="lede">Districts have become very good at measuring campuses. Ratings, domain scores, growth measures, intervention designations — the instrumentation pointed at schools is detailed and consequential. The instrumentation pointed at the central office is comparatively thin, and it is generally not outcomes-based.</p>
+
+      <h3 id="asym">I. The asymmetry</h3>
+
+      <p>Look at how accountability is distributed across the three layers of a district and the gap is immediately visible.</p>
+    </div>
+
+    <div class="gap">
+      <div class="gap-c g1">
+        <div class="gap-who">Campus level</div>
+        <h5>Measured continuously, on outcomes</h5>
+        <p>Teachers evaluated against appraisal frameworks tied to student growth. Principals evaluated on campus performance. Ratings published annually, consequences attached.</p>
+      </div>
+      <div class="gap-c g2">
+        <div class="gap-who">Superintendent</div>
+        <h5>Measured annually, by the Board</h5>
+        <p>Formal evaluation against Board-adopted goals, standards, and district performance. Public, structured, and consequential.</p>
+      </div>
+      <div class="gap-c g3">
+        <div class="gap-who">Central office leadership</div>
+        <h5>Measured largely on role execution</h5>
+        <p>Typically reviewed against job description, effort, and time in service. Rarely against a defined outcome connected to the strategic plan and almost never on a common instrument across divisions.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>This is not a criticism of anyone's performance. It is an observation about instrument design. The layer that interprets policy, sets district direction, allocates resources, and builds the systems campuses operate inside is the layer with the least outcomes-based measurement attached to it — and it is also, structurally, the layer responsible for designing the measurement everyone else receives.</p>
+
+      <div class="callout">
+        <div class="k">The consequence that shows up in the field</div>
+        <p>Campus staff notice. A recurring theme in district climate data nationally is diminished trust in central office, and one contributing factor is a perceived accountability imbalance — the sense that campuses answer for outcomes while central office answers for activity. <strong>Closing that gap is as much a trust intervention as a governance one.</strong></p>
+      </div>
+
+      <h3 id="compliance">II. What policy already asks for</h3>
+
+      <p>The interesting part is that this is not a new obligation. Texas Education Code Section 11.252 directs districts to evaluate the effectiveness of their decision-making in matters affecting student performance, and local policy in most districts — including here — carries language assigning the Board responsibility for ensuring adequate evaluation criteria are developed.</p>
+
+      <p>In practice, districts commonly satisfy this by reviewing campus outcome data and treating those results as a proxy for the quality of district decision-making. That inference is reasonable but thin. Campus outcomes reflect many things; the specific contribution of a central office decision is not visible in them, and a roundtable reviewing campus data does not constitute an evaluation of the decisions that shaped it.</p>
+
+      <p><strong>So the honest framing is not "adopt a new accountability policy."</strong> It is closer to: the district already has an obligation here, currently satisfied by inference, and there is a more defensible way to meet it.</p>
+
+      <h3 id="shape">III. What a model would need to do</h3>
+      <p>Before any mechanics, the design constraints. A model that fails any of these will not survive contact with a real cabinet.</p>
+    </div>
+
+    <div class="pr">
+      <div class="pr-c"><h5>Vertically aligned</h5><p>District mission and Board goals should cascade to superintendent goals, then to division goals, then to something actually measurable — with the measures rolling back up so a number at the bottom means something at the top.</p></div>
+      <div class="pr-c"><h5>Outcomes, not effort</h5><p>The distinguishing feature relative to typical central office review. Effort and role execution matter, but they are not what campuses and superintendents are held to.</p></div>
+      <div class="pr-c"><h5>Collaboratively set</h5><p>Divisions should shape their own goals. Imposed metrics produce compliance behavior rather than improvement, and the people closest to the work know best what is worth measuring.</p></div>
+      <div class="pr-c"><h5>Independently calibrated</h5><p>Self-set goals need an external rigor check. Without one, the measures drift toward what is easy to achieve, and the model quietly stops discriminating.</p></div>
+      <div class="pr-c"><h5>Flexible without losing validity</h5><p>Divisions do genuinely different work. The instrument has to accommodate that without becoming so customized that cross-division comparison is meaningless.</p></div>
+      <div class="pr-c"><h5>Constructive, not punitive</h5><p>If the first year is experienced as a threat, there is no second year. Framing and sequencing matter more than the arithmetic.</p></div>
+    </div>
+
+    <div class="prose">
+      <h3 id="cascade">IV. One way it could work</h3>
+      <p>A weighted cascade is the most straightforward structure that satisfies the constraints above. This is illustrative — the number of levels, the weighting conventions, and the scoring approach are all design decisions to be made together.</p>
+    </div>
+
+    <div class="cascade">
+      <div class="casc-row r1"><span class="casc-lvl">Level 1</span><span class="casc-t"><b>District mission and vision</b> — the anchor, shaped with the Board through strategic planning</span></div>
+      <div class="casc-row r2"><span class="casc-lvl">Level 2</span><span class="casc-t"><b>Superintendent goals</b> — a small set, broad in nature, weighted by the Superintendent according to their relative importance</span></div>
+      <div class="casc-row r3"><span class="casc-lvl">Level 3</span><span class="casc-t"><b>Division goals</b> — each division defines how it supports each Superintendent goal, with weights reflecting where that division can genuinely contribute</span></div>
+      <div class="casc-row r4"><span class="casc-lvl">Level 4</span><span class="casc-t"><b>Objectives and measures</b> — the measurable layer, where a defined outcome scores on a common scale</span></div>
+    </div>
+
+    <div class="prose">
+      <p>Weights at each level sum to one, so scores roll upward cleanly. A division ends the year with a performance measure derived from its own stated objectives rather than from a subjective review. Superintendent goals accumulate a score reflecting how the organization as a whole moved on each.</p>
+
+      <p>One design question worth surfacing early rather than late: <strong>how the Superintendent's own measure relates to this cascade.</strong> There is a version where it derives directly from division results, which is elegant and creates strong shared incentive. There is also a reasonable Board objection to a superintendent evaluation assembled from numbers her own cabinet produced. That tension is real, it has several defensible resolutions, and it should be settled with the Board in advance rather than discovered during an evaluation cycle.</p>
+
+      <div class="callout">
+        <div class="k">A useful design principle</div>
+        <p>Requiring each division to define goals across distinct categories — effectiveness, efficiency, and accountability, for instance — prevents divisions from measuring only what they are already good at. It forces a balanced portfolio without dictating content.</p>
+      </div>
+
+      <h3 id="risks">V. Where this gets hard</h3>
+      <p>The mechanics are the easy part. These are the failure modes, and they are worth naming openly.</p>
+    </div>
+
+    <div class="risk"><h5>Self-set goals with self-set weights invite drift</h5><p>If a division defines the goal, sets the weight, and defines what counts as success, the model will produce comfortable numbers within two cycles. An independent rigor review before measures are locked is not optional — it is the load-bearing element.</p></div>
+    <div class="risk"><h5>Score compression makes the instrument useless</h5><p>If every division finishes between 0.85 and 0.95, the model has measured nothing and the Board will say so. Calibration guidance, or a shared review before scores are final, has to exist from the first cycle.</p></div>
+    <div class="risk"><h5>Metric mania</h5><p>Measuring everything measurable rather than what matters produces enormous effort and no insight. Fewer, better measures beat comprehensive ones, and resisting expansion is a continuous discipline.</p></div>
+    <div class="risk"><h5>It reads as an indictment</h5><p>Any proposal to measure executives can be heard as an accusation that executives have not been performing. If that is how it lands, adoption fails regardless of design quality. This is a sequencing and posture problem more than a technical one.</p></div>
+    <div class="risk"><h5>Culture change takes longer than the instrument does</h5><p>Building the model is a year. Building the culture that uses it honestly is longer. Expecting the instrument to produce the culture gets the causality backwards.</p></div>
+
+    <div class="prose">
+      <h3 id="posture">VI. How I would introduce it</h3>
+
+      <p>Not as a system to be installed. As a question the district already has an obligation to answer, brought to Cabinet with a starting point rather than a specification.</p>
+
+      <div class="callout gold">
+        <div class="k">The commitment that makes this workable</div>
+        <p>Organizational Strategy &amp; Impact should be scored first, on the draft instrument, with results shared to Cabinet — before any other division is asked to adopt it. If the model is sound, that costs nothing. If it is flawed, it fails on the division that built it rather than on someone who inherited it. <strong>Nobody should be asked to be measured by an instrument its designer has not been measured by.</strong></p>
+      </div>
+
+      <p>From there the sequence is straightforward and slow on purpose. Strategic planning first, because goals without a mission to cascade from are arbitrary. Then design workshops with divisions, because the people doing the work should shape what gets measured. Then a pilot year framed explicitly as calibration rather than evaluation — the first cycle is for learning whether the measures discriminate, not for judging anyone. Then, and only then, a live cycle with results reported to the Board.</p>
+
+      <p>That is a multi-year arc. It should be. The instrument can be built quickly; the trust required to use it honestly cannot.</p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-note foot-close">Nobody should be asked to be measured by an instrument its designer has not been measured by.</p>
+  </div>
+</footer>
+
+</body>
+</html>

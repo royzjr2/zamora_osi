@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<title>Organizational Health — Working Framework</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* page-specific */
+.layers{display:grid;gap:.9rem;margin:1.8rem 0}
+.layer{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem;align-items:start}
+.layer-n{font-family:var(--disp);font-weight:600;font-size:30px;line-height:1;color:var(--white);background:var(--navy);width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:8px;flex:none}
+.layer.l2 .layer-n{background:var(--blue)}
+.layer.l3 .layer-n{background:var(--navy-deep)}
+.layer.l4 .layer-n{background:var(--gold);color:#4a3704}
+.layer h4{font-family:var(--disp);font-weight:500;font-size:18px;color:var(--navy-deep);margin-bottom:.15rem}
+.layer .sub{font-size:12px;color:var(--blue);font-weight:700;letter-spacing:.3px;margin-bottom:.5rem}
+.layer p{font-size:13.5px;line-height:1.65;color:var(--ink-soft);margin:0}
+
+.itable{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.itable thead th{background:var(--navy-deep);color:#fff;font-family:var(--cond);font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;text-align:left;padding:.7rem .85rem}
+.itable td{padding:.7rem .85rem;border-top:1px solid var(--line);vertical-align:top;line-height:1.5}
+.itable tbody tr:nth-child(even){background:#fafcfd}
+.itable td:first-child{font-weight:700;color:var(--navy);white-space:nowrap}
+.itable td.mut{color:var(--ink-mute);font-size:12.5px}
+.wrapper-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:1.4rem 0;padding:1.15rem 1.25rem;background:var(--panel);border:1px solid var(--line);border-radius:var(--r)}
+.chain-node{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:.45rem .75rem;font-size:11.5px;font-weight:700;color:var(--navy)}
+.chain-node.end{background:var(--navy);border-color:var(--navy);color:#fff}
+.chain-arw{color:var(--blue);font-weight:700}
+
+.cad{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem;margin:1.5rem 0}
+.cad-c{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:8px;padding:1rem 1.1rem}
+.cad-c .q{font-family:var(--cond);font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem}
+.cad-c h5{font-size:13px;font-weight:700;color:var(--navy-deep);margin-bottom:.35rem}
+.cad-c p{font-size:12px;color:var(--ink-soft);line-height:1.55}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="nav-brand">Organizational Strategy &amp; Impact<span>Irving ISD · Working Framework</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="portfolio-capacity.html">Portfolio &amp; Capacity</a></li>
+      <li><a href="organizational-health.html" aria-current="page">Organizational Health</a></li>
+      <li><a href="capacity-measurement.html">Campus Capacity</a></li>
+      <li><a href="effectiveness-model.html">Effectiveness</a></li>
+      <li><a href="index.html#roadmap">Roadmap</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="eyebrow">Domain 03 · Deep dive</div>
+    <h1>Organizational <em>Health</em></h1>
+    <p class="hero-sub">Most districts survey. Few of them learn anything. The difference is not effort or frequency — it is whether the instruments are designed to produce decisions and whether anyone is obligated to act on what comes back.</p>
+    <div class="hero-meta">
+      <span class="pill solid">Working draft</span>
+      <span class="pill">Platform-agnostic design</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="sec">
+  <div class="wrap">
+    <a class="backlink" href="index.html">← Back to overview</a>
+
+    <div class="toc">
+      <div class="toc-k">In this section</div>
+      <ol>
+        <li><a href="#problem">Why most district listening fails</a></li>
+        <li><a href="#architecture">Four layers</a></li>
+        <li><a href="#instruments">The instrument suite</a></li>
+        <li><a href="#scoring">How scores are built</a></li>
+        <li><a href="#cadence">Cadence and closure</a></li>
+        <li><a href="#sequence">Phased introduction</a></li>
+      </ol>
+    </div>
+
+    <div class="prose">
+      <p class="lede">Organizational health is measurable. Culture, engagement, trust, role clarity, decision-making, and collaboration all leave signatures in data if you ask well and ask consistently. The obstacle is rarely willingness to measure. It is that most district listening is built as a compliance exercise, produces a report nobody acts on, and quietly teaches people that answering honestly changes nothing.</p>
+
+      <h3 id="problem">I. Why most district listening fails</h3>
+
+      <p>Four failure modes account for nearly all of it.</p>
+
+      <ul>
+        <li><strong>The annual monolith.</strong> One long survey, once a year, covering everything. By the time results are processed the conditions that produced them have changed, and the instrument is too broad to point at any specific action.</li>
+        <li><strong>Questions with no action attached.</strong> If a low score on an item does not imply a specific response, the item is measuring for its own sake. Every question should have a clear consequence if the answer is poor.</li>
+        <li><strong>Results that stop at leadership.</strong> Data collected from people and never returned to them. This is the fastest way to destroy response rates permanently — and the damage is not recoverable within a single cycle.</li>
+        <li><strong>Incomparable instruments.</strong> Different questions each year, or different instruments compared to one another, producing trend lines that do not mean anything.</li>
+      </ul>
+
+      <div class="callout gold">
+        <div class="k">The design rule</div>
+        <p>Same instrument, same items, same time of year. Never compare across different instruments. Trend data is the entire value of a listening system, and it is destroyed the first time someone rewrites the questionnaire because they did not like last year's results.</p>
+      </div>
+
+      <h3 id="architecture">II. Four layers</h3>
+
+      <p>A functioning system has four connected layers. Most districts build the first and stop.</p>
+    </div>
+
+    <div class="layers">
+      <div class="layer l1">
+        <div class="layer-n">1</div>
+        <div>
+          <h4>Listening architecture</h4>
+          <div class="sub">Continuous, multi-stakeholder, short enough to actually complete</div>
+          <p>Annual instruments plus quarterly pulses across three stakeholder groups — students, families, and staff. Instruments are short, targeted, and frequent enough to catch conditions before they become crises. Under ten minutes for families and students, under fifteen for staff. Open-ended items at the end of every instrument, because the richest data is usually qualitative.</p>
+        </div>
+      </div>
+      <div class="layer l2">
+        <div class="layer-n">2</div>
+        <div>
+          <h4>Connected profiles</h4>
+          <div class="sub">Experience data joined to the data the district already holds</div>
+          <p>Survey results are considerably more useful when joined to attendance, grades, assessment results, and role and tenure data. A belonging score in isolation is interesting. A belonging score alongside a three-week attendance decline is actionable. This layer requires student and staff information system integration and is the technical dependency most districts underestimate.</p>
+        </div>
+      </div>
+      <div class="layer l3">
+        <div class="layer-n">3</div>
+        <div>
+          <h4>Signal detection and routing</h4>
+          <div class="sub">The bridge between data and action</div>
+          <p>Defined thresholds that generate a flag and route it to a named person — counselor, administrator, supervisor — with resolution tracked. Retention risk on the staff side works the same way: an intent-to-stay response of a year or less flags before a resignation letter arrives. Thresholds must be calibrated against historical data rather than guessed, which means this layer follows rather than leads.</p>
+        </div>
+      </div>
+      <div class="layer l4">
+        <div class="layer-n">4</div>
+        <div>
+          <h4>Multi-rater feedback</h4>
+          <div class="sub">Developmental first, evaluative only if and when trust supports it</div>
+          <p>Structured competency feedback for teachers, administrators, and support staff from multiple rater perspectives — self, supervisor, peer, and where appropriate student or family. The gap between self-rating and others' ratings is frequently the most useful output. Introduced last and framed developmentally, because a multi-rater instrument introduced as evaluation in year one will not survive year two.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3 id="instruments">III. The instrument suite</h3>
+      <p>Eight instruments cover the three stakeholder groups and the three staff role families. Item counts are design targets, not commitments — each would be reviewed against what Irving already administers before anything new is built.</p>
+    </div>
+
+    <div class="wrapper-x">
+    <table class="itable">
+      <thead><tr><th>Instrument</th><th>Cycle &amp; scope</th><th>Primary metrics</th></tr></thead>
+      <tbody>
+        <tr><td>Family Experience</td><td class="mut">Annual · two sections · district and school level</td><td class="mut">NPS · Satisfaction</td></tr>
+        <tr><td>Student, Gr. 9–12</td><td class="mut">Annual · six domains</td><td class="mut">Satisfaction · Safety flags</td></tr>
+        <tr><td>Student, Gr. 6–8</td><td class="mut">Annual · six domains</td><td class="mut">Satisfaction · Belonging flags</td></tr>
+        <tr><td>Student, Gr. 3–5</td><td class="mut">Annual · visual response scale</td><td class="mut">Primary KPI · at-risk flags</td></tr>
+        <tr><td>Staff Experience</td><td class="mut">Annual + three pulses</td><td class="mut">Engagement · Intent to Stay</td></tr>
+        <tr><td>Teacher multi-rater</td><td class="mut">Four rater versions · eight competencies</td><td class="mut">Composite · Self-other gap</td></tr>
+        <tr><td>Administrator multi-rater</td><td class="mut">Four rater versions · nine competencies</td><td class="mut">Composite · Self-other gap</td></tr>
+        <tr><td>Support staff multi-rater</td><td class="mut">Three rater versions · five competencies</td><td class="mut">Composite · Service quality</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="prose">
+      <h3 id="scoring">IV. How scores are built</h3>
+      <p>Scoring is deliberately simple and deliberately fixed. Favorability percentages rather than raw averages, because favorability is comparable across instruments that use different item sets — which is what makes a unified district view possible at all.</p>
+    </div>
+
+    <div class="chain">
+      <span class="chain-node">Item response</span><span class="chain-arw">→</span>
+      <span class="chain-node">Favorability %</span><span class="chain-arw">→</span>
+      <span class="chain-node">Domain score</span><span class="chain-arw">→</span>
+      <span class="chain-node end">Overall experience score</span>
+    </div>
+
+    <div class="prose">
+      <p>Favorability counts the top two options on a five-point agree scale. A domain score averages the favorability of its items. An overall score averages the domain scores — domains, not items, so that a domain with many items does not silently outweigh one with few. Key driver items are tracked separately as headline KPIs rather than folded into the composite, to avoid double-counting.</p>
+
+      <div class="callout">
+        <div class="k">Confidentiality floor</div>
+        <p>Minimum reporting thresholds are non-negotiable and should be set before the first launch: ten respondents for family and student results, five for staff and multi-rater results. Below threshold, results are suppressed. This is what makes honest answers possible, and any exception granted once will be assumed to apply generally.</p>
+      </div>
+
+      <h3 id="cadence">V. Cadence and closure</h3>
+      <p>The calendar matters as much as the instruments. A predictable rhythm makes participation habitual and makes results comparable.</p>
+    </div>
+
+    <div class="cad">
+      <div class="cad-c"><div class="q">Fall</div><h5>Annual staff instrument</h5><p>Full engagement survey. Baseline set for the year. Principal and department views configured.</p></div>
+      <div class="cad-c"><div class="q">Winter</div><h5>Pulse one · student cycle</h5><p>Short pulse on top-signal items only. Secondary student instruments in field.</p></div>
+      <div class="cad-c"><div class="q">Spring</div><h5>Family instrument · pulse two</h5><p>Family experience in field with multilingual outreach. Elementary student instrument.</p></div>
+      <div class="cad-c"><div class="q">Year end</div><h5>Pulse three · review</h5><p>Final pulse. Instrument quality review. Response rate analysis. Next-year refinement.</p></div>
+    </div>
+
+    <div class="prose">
+      <h4>Closing the loop</h4>
+      <p>Within a defined window of every survey closing — ten school days is a reasonable standard — results go back to the people who provided them, along with what the district intends to do about it. Not a data dump. A short, plain statement of what was heard and what happens next.</p>
+
+      <p>This is not a communications nicety. It is the mechanism that sustains response rates. A district that reports back reliably will see participation climb year over year. A district that does not will watch it collapse and then conclude, incorrectly, that its people do not want to give feedback.</p>
+
+      <h3 id="sequence">VI. Phased introduction</h3>
+      <p>Launching everything at once overwhelms both the team administering it and the staff receiving it. Sequence by stakes, lowest first, so that credibility accumulates before the higher-sensitivity instruments arrive.</p>
+
+      <ul>
+        <li><strong>Student listening first.</strong> Lower stakes for staff, and it establishes that the system produces visible action before anyone is personally rated.</li>
+        <li><strong>Staff engagement next.</strong> Baseline established, driver analysis run, results returned quickly and visibly.</li>
+        <li><strong>Teacher multi-rater after that</strong>, developmental only, piloted with one band before universal rollout.</li>
+        <li><strong>Administrator multi-rater last.</strong> Deliberately. Administrator buy-in comes far more readily after they have watched teachers experience the instrument as useful rather than punitive.</li>
+      </ul>
+
+      <div class="callout">
+        <div class="k">Dependencies to resolve first</div>
+        <p>Platform selection and integration specifications. Threshold calibration against historical data. Multilingual family outreach strategy. Board-facing reporting design, which is a different product from the operational dashboard. None of these are blockers to beginning — an audit of what Irving already administers is the honest first step, and it requires no new investment at all.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-note foot-close">Nobody answers a second survey if the first one changed nothing. Visible response is the precondition for honest data.</p>
+  </div>
+</footer>
+
+</body>
+</html>
