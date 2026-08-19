@@ -5,11 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="referrer" content="no-referrer">
-<title>Organizational Strategy &amp; Impact — Working Framework</title>
+<title>Organizational Strategy &amp; Impact | Working Framework</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+.conv{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem 1.4rem 1.2rem;box-shadow:var(--shadow)}
+#convsvg{width:100%;height:auto;display:block}
+.cv-dbox{cursor:pointer}
+.cv-dbox rect{transition:opacity .25s,stroke-width .2s;stroke:transparent;stroke-width:2}
+.cv-dbox text{font-family:'Roboto Condensed',sans-serif;font-weight:700;pointer-events:none}
+.cv-dbox.dim{opacity:.28}
+.cv-dbox.on rect{stroke:var(--navy-deep);stroke-width:3}
+.cv-path{fill:none;stroke-width:2.5;opacity:.42;transition:opacity .25s,stroke-width .25s}
+.cv-path.dim{opacity:.07}
+.cv-path.on{opacity:1;stroke-width:5}
+.cv-out{transition:opacity .25s}
+.cv-out.dim{opacity:.35}
+.cv-band-label{font-family:'Oswald',sans-serif;font-weight:500;fill:#fff}
+.cv-band-sub{font-family:'Roboto',sans-serif;fill:#8ab4cc;font-size:11.5px}
+.cv-outlabel{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:11.5px;fill:var(--navy-deep)}
+.cv-outsub{font-family:'Roboto',sans-serif;font-size:10.5px;fill:var(--ink-mute)}
+.cv-cap{font-family:'Roboto Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;fill:var(--ink-mute)}
+.convnote{margin-top:1.1rem;border-top:1px solid var(--line);padding-top:1.1rem}
+.convnote p{font-size:13px;color:var(--ink-soft);line-height:1.72;margin-bottom:.7rem}
+.convnote p:last-child{margin-bottom:0}
+.convnote strong{color:var(--navy-deep)}
+.convpanel{margin-top:1.1rem;border-top:1px solid var(--line);padding-top:1.1rem;min-height:112px}
+.cp-k{font-family:'Roboto Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem}
+.cp-n{font-family:'Oswald',sans-serif;font-weight:500;font-size:19px;color:var(--navy-deep);margin-bottom:.5rem;line-height:1.25}
+.cp-rows{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.8rem}
+.cp-r .cp-rk{font-family:'Roboto Condensed',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-mute);margin-bottom:.25rem}
+.cp-r p{font-size:12.8px;color:var(--ink-soft);line-height:1.6}
+.cp-link{display:inline-block;font-family:'Roboto Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy)}
+@media(max-width:760px){.cp-rows{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -19,6 +50,7 @@
     <div class="nav-brand">Organizational Strategy &amp; Impact<span>Irving ISD · Working Framework</span></div>
     <ul class="nav-links">
       <li><a href="index.html" aria-current="page">Overview</a></li>
+      <li><a href="strategic-planning.html">Planning</a></li>
       <li><a href="portfolio-capacity.html">Portfolio</a></li>
       <li><a href="organizational-health.html">Org Health</a></li>
       <li><a href="strategic-compensation.html">Strat Comp</a></li>
@@ -34,7 +66,7 @@
   <div class="wrap hero-in">
     <div class="eyebrow">Senior Executive of Organizational Strategy &amp; Impact</div>
     <h1>A district that can <em>see itself clearly</em> enough to adjust before it has to react.</h1>
-    <p class="hero-sub">A working framework for enterprise strategy, organizational health, and performance measurement at Irving ISD — how the domains connect, what gets built first, and how progress is judged.</p>
+    <p class="hero-sub">A working framework for enterprise strategy, organizational health, and performance measurement at Irving ISD: how the domains connect, what gets built first, and how progress is judged.</p>
     <div class="hero-meta">
       <span class="pill solid">Working draft</span>
       <span class="pill">Internal · Need-to-know</span>
@@ -47,7 +79,7 @@
     <div class="stat"><div class="stat-n">~61%</div><div class="stat-l">Estimated capacity utilization, pending reconciliation</div></div>
     <div class="stat"><div class="stat-n">6</div><div class="stat-l">Connected domains, one operating system</div></div>
     <div class="stat"><div class="stat-n">12 mo</div><div class="stat-l">To move from diagnosis to consequence</div></div>
-    <div class="stat"><div class="stat-n">1</div><div class="stat-l">Seat accountable for how it all fits together</div></div>
+    <div class="stat"><div class="stat-n">1</div><div class="stat-l">Place accountable for how it all fits together</div></div>
   </div>
 </section>
 
@@ -56,8 +88,38 @@
 <section class="sec">
   <div class="wrap">
     <div class="thesis">
-      <p>Districts rarely fail for lack of information. They fail because <strong>no single seat is accountable for how the information fits together</strong> — where enrollment is heading, whether capacity matches it, whether staffing follows, whether compensation rewards what we say matters, and whether any of it is being implemented as designed.</p>
-      <p class="punch">This role exists to hold that relationship. Not to produce more reports, but to make the connections visible and consequential.</p>
+      <p>Districts rarely fail for lack of information. They fail because <strong>no one is accountable for how the information fits together</strong>: where enrollment is heading, whether capacity matches it, whether staffing follows, whether compensation rewards what we say matters, and whether any of it is being implemented as designed.</p>
+      <p class="punch">That means one place reconciles the enrollment number, the staffing model, and the compensation design against each other before they reach the Board, not after they have already drifted apart.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="system">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-eyebrow">The system</div>
+      <h2>Six domains that <em>have to arrive together</em></h2>
+      <p class="sec-lede">Each of these already exists somewhere in the district. What does not exist is the layer where they get reconciled against each other before anything reaches the Board. Select a domain to trace what it contributes.</p>
+    </div>
+
+    <div class="conv">
+      <svg id="convsvg" viewBox="0 0 900 470" role="img" aria-label="Diagram showing six domains converging into a reconciliation layer, producing three outputs">
+        <text class="cv-cap" x="0" y="12">Inputs · six standing domains</text>
+        <g id="cv-paths"></g>
+        <g id="cv-boxes"></g>
+
+        <rect x="0" y="206" width="900" height="64" rx="8" fill="#002845"></rect>
+        <text class="cv-band-label" x="24" y="234" font-size="19">Organizational Strategy &amp; Impact</text>
+        <text class="cv-band-sub" x="24" y="253">Reconciles the six against each other, before decisions, not after</text>
+
+        <text class="cv-cap" x="0" y="300">Outputs · what the reconciliation actually produces</text>
+        <g id="cv-outs"></g>
+      </svg>
+      <div class="convpanel" id="convpanel"></div>
+      <div class="convnote">
+        <p><strong>Leadership capacity is an output here rather than a seventh domain</strong>, because its inputs are already distributed across the six. Campus capacity measurement tracks principal tenure and flags where leadership stability is eroding. Strategic compensation holds T-PESS results and effectiveness levels. Organizational health carries the administrator feedback instruments and competency frameworks. Portfolio work forces placement decisions. Planning treats succession as a continuity risk.</p>
+        <p>Assembled, those produce something no single division can see on its own: an honest picture of who is ready, where the bench is thin, and which campuses are about to lose the leadership their results depend on. That is a synthesis problem, which is why it belongs to the layer rather than to any one domain.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -66,8 +128,8 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-eyebrow">The work</div>
-      <h2>Six domains, <em>one operating system</em></h2>
-      <p class="sec-lede">Each domain is a standing function with its own instruments and cadence. They are built to inform one another — a change in enrollment assumptions moves staffing, which moves compensation design, which moves what the scorecards report.</p>
+      <h2>Each domain, <em>in detail</em></h2>
+      <p class="sec-lede">The system view above shows how the domains move each other. Below is what each one actually does.</p>
     </div>
 
     <div class="domains">
@@ -75,21 +137,21 @@
       <a class="domain d1" href="portfolio-capacity.html">
         <div class="domain-n">01 · Deep dive available</div>
         <h3>Portfolio &amp; Capacity</h3>
-        <p>Enrollment forecasting, planning denominators, capacity reconciliation, and long-range facilities sequencing — governed as a standing annual cycle rather than an episodic response.</p>
+        <p>Enrollment forecasting, planning denominators, capacity reconciliation, and long-range facilities sequencing, governed as a standing annual cycle rather than an episodic response.</p>
         <span class="domain-go">Open the deep dive →</span>
       </a>
 
-      <div class="domain d2">
-        <div class="domain-n">02 · In development</div>
+      <a class="domain d2" href="strategic-planning.html">
+        <div class="domain-n">02 · Deep dive available</div>
         <h3>Strategic Planning &amp; Execution</h3>
-        <p>Translating District priorities into named outcomes, measures, owners, milestones, and review cycles — and an enterprise cadence that surfaces barriers and required decisions before they compound.</p>
-        <span class="domain-soon">Section forthcoming</span>
-      </div>
+        <p>Translating District priorities into named outcomes, measures, owners, milestones, and review cycles, plus an enterprise cadence that surfaces barriers and required decisions before they compound.</p>
+        <span class="domain-go">Open the deep dive →</span>
+      </a>
 
       <a class="domain d3" href="organizational-health.html">
         <div class="domain-n">03 · Deep dive available</div>
         <h3>Organizational Health</h3>
-        <p>A repeatable enterprise diagnostic covering culture, engagement, trust, role clarity, and decision rights — with instrument design treated as a technical discipline and every loop closed visibly.</p>
+        <p>A repeatable enterprise diagnostic covering culture, engagement, trust, role clarity, and decision rights, with instrument design treated as a technical discipline and every loop closed visibly.</p>
         <span class="domain-go">Open the deep dive →</span>
       </a>
 
@@ -103,14 +165,14 @@
       <a class="domain d5" href="capacity-measurement.html">
         <div class="domain-n">05 · Deep dive available</div>
         <h3>Campus Capacity Measurement</h3>
-        <p>A validated composite measure of school organizational capacity built from administrative data — applied to Irving campuses to make operational effectiveness legible alongside academic outcomes.</p>
+        <p>A validated composite measure of school organizational capacity built from administrative data, applied to Irving campuses to make operational effectiveness legible alongside academic outcomes.</p>
         <span class="domain-go">Open the deep dive →</span>
       </a>
 
       <a class="domain d6" href="effectiveness-model.html">
         <div class="domain-n">06 · Deep dive available</div>
         <h3>District Effectiveness Model</h3>
-        <p>Common performance measures and executive scorecards that turn measurement into governance — and close the asymmetry between how closely campuses are measured and how loosely central office is.</p>
+        <p>Common performance measures and executive scorecards that turn measurement into governance, closing the asymmetry between how closely campuses are measured and how loosely central office is.</p>
         <span class="domain-go">Open the deep dive →</span>
       </a>
 
@@ -139,7 +201,7 @@
       <div class="phase p3">
         <div class="phase-tag">Months 9–12</div>
         <h3>Make it consequential</h3>
-        <p>First full review cycle completed. First scorecard reported to the Board. Strategic Compensation cycle executed against documented, auditable rules. Recommendations delivered on what to continue, refine, expand, or stop — with evidence behind each.</p>
+        <p>First full review cycle completed. First scorecard reported to the Board. Strategic Compensation cycle executed against documented, auditable rules. Recommendations delivered on what to continue, refine, expand, or stop, with evidence behind each.</p>
       </div>
     </div>
   </div>
@@ -156,7 +218,7 @@
       <div class="track-row"><span class="track-ph">Phase 0</span><span class="track-t">Capacity reconciliation and enrollment projection methodology</span><span class="status now">In progress</span></div>
       <div class="track-row"><span class="track-ph">Phase 0</span><span class="track-t">Planning denominator recommendation for internal adoption</span><span class="status now">In progress</span></div>
       <div class="track-row"><span class="track-ph">Phase 1</span><span class="track-t">Decision criteria framework built to govern multi-phase work</span><span class="status next">Next</span></div>
-      <div class="track-row"><span class="track-ph">Phase 1</span><span class="track-t">Organizational health diagnostic — instrument design and pilot</span><span class="status next">Next</span></div>
+      <div class="track-row"><span class="track-ph">Phase 1</span><span class="track-t">Organizational health diagnostic: instrument design and pilot</span><span class="status next">Next</span></div>
       <div class="track-row"><span class="track-ph">Phase 1</span><span class="track-t">Executive scorecard v1 drafted with Cabinet input</span><span class="status next">Next</span></div>
       <div class="track-row"><span class="track-ph">Phase 2</span><span class="track-t">Campus capacity measurement applied to Irving campuses</span><span class="status later">Later</span></div>
       <div class="track-row"><span class="track-ph">Phase 2</span><span class="track-t">Effectiveness framework review and business rule documentation</span><span class="status later">Later</span></div>
@@ -169,12 +231,12 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-eyebrow">Operating posture</div>
-      <h2>How this seat <em>works</em></h2>
+      <h2>How this function <em>operates</em></h2>
     </div>
     <div class="principles">
-      <div class="principle"><h4>Lead through influence</h4><p>Division leaders retain operational ownership. The leverage here is clarity, evidence, and follow-through — not authority over their teams.</p></div>
+      <div class="principle"><h4>Lead through influence</h4><p>Division leaders retain operational ownership. The leverage here is clarity, evidence, and follow-through, not authority over their teams.</p></div>
       <div class="principle"><h4>Publish on a calendar</h4><p>Scorecards, reviews, and reports on fixed dates. Predictability is what makes measurement feel like governance rather than surveillance.</p></div>
-      <div class="principle"><h4>Say the inconvenient thing</h4><p>The value of this seat is unfiltered judgment. An advisor who only confirms what is already believed is not worth the position.</p></div>
+      <div class="principle"><h4>Say the inconvenient thing</h4><p>The value of this function is unfiltered judgment. An advisor who only confirms what is already believed is not worth the position.</p></div>
       <div class="principle"><h4>Close every loop</h4><p>Nobody answers a second survey if the first one changed nothing. Visible response is the precondition for honest data.</p></div>
     </div>
   </div>
@@ -188,5 +250,122 @@
   </div>
 </footer>
 
+
+
+
+<script>
+(function(){
+  var D=[
+   {id:"plan",c:"#002845",label:["Strategic","Planning"],href:"strategic-planning.html",
+    gives:"The goals every other domain is measured against.",
+    needs:"Capacity findings and organizational diagnostics, so goals are set against real conditions rather than assumptions."},
+   {id:"port",c:"#004d7c",label:["Portfolio &","Capacity"],href:"portfolio-capacity.html",
+    gives:"Enrollment projections, capacity reconciliation, and facilities sequencing.",
+    needs:"Campus capacity scores to judge which sites can absorb students, and compensation modeling for the principals affected."},
+   {id:"health",c:"#40acd2",label:["Organizational","Health"],href:"organizational-health.html",
+    gives:"Listening data from students, families, and staff on a fixed cadence.",
+    needs:"A planning cycle that acts on what comes back. Otherwise response rates collapse."},
+   {id:"comp",c:"#f3c63c",label:["Strategic","Compensation"],href:"strategic-compensation.html",
+    gives:"Effectiveness-based pay for principals, moving to APs and teachers.",
+    needs:"Campus classifications from portfolio work, and climate data to mature the culture measure beyond participation."},
+   {id:"cci",c:"#76001a",label:["Campus","Capacity"],href:"capacity-measurement.html",
+    gives:"A validated 0–100 readiness score for every campus, already computed.",
+    needs:"Personnel data to sharpen its indicators past public-data proxies."},
+   {id:"eff",c:"#8f9499",label:["Effectiveness","Model"],href:"effectiveness-model.html",
+    gives:"Scorecards and a review cadence that make measurement consequential.",
+    needs:"Measures from every other domain. It has nothing to report without them."}
+  ];
+  var OUT=[
+   {x:60,  t:"Leadership capacity",    s:"Who is ready · where the gaps are · who is next"},
+   {x:340, t:"Decisions that hold up", s:"Reconciled before they are made"},
+   {x:620, t:"A district that adjusts",s:"Ahead of the problem, not behind it"}
+  ];
+
+  var BW=134,BH=62,GAP=19,Y=24,SVGNS="http://www.w3.org/2000/svg";
+  var boxes=document.getElementById('cv-boxes'),paths=document.getElementById('cv-paths'),outs=document.getElementById('cv-outs');
+  function el(t,a){var e=document.createElementNS(SVGNS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+
+  var totalW=D.length*BW+(D.length-1)*GAP, startX=(900-totalW)/2;
+  D.forEach(function(d,i){
+    d.x=startX+i*(BW+GAP); d.cx=d.x+BW/2;
+    d.bandX=170+i*112;
+  });
+
+  // curved paths: domain -> band
+  D.forEach(function(d){
+    var p=el('path',{d:"M "+d.cx+" "+(Y+BH)+" C "+d.cx+" "+(Y+BH+62)+", "+d.bandX+" "+(206-62)+", "+d.bandX+" 206",
+      class:"cv-path",stroke:d.c,"data-id":d.id});
+    paths.appendChild(p);
+  });
+  // band -> outputs
+  OUT.forEach(function(o,i){
+    var ox=o.x+110;
+    var p=el('path',{d:"M "+(300+i*150)+" 270 C "+(300+i*150)+" 310, "+ox+" 320, "+ox+" 356",
+      class:"cv-path cv-outpath",stroke:"#40acd2"});
+    paths.appendChild(p);
+  });
+
+  D.forEach(function(d){
+    var g=el('g',{class:"cv-dbox","data-id":d.id});
+    g.appendChild(el('rect',{x:d.x,y:Y,width:BW,height:BH,rx:7,fill:d.c}));
+    var light=(d.c==="#f3c63c"||d.c==="#8f9499");
+    d.label.forEach(function(t,li){
+      var tx=el('text',{x:d.cx,y:Y+27+li*15,"text-anchor":"middle","font-size":"12.5",
+        fill:light?"#002845":"#ffffff"});
+      tx.textContent=t; g.appendChild(tx);
+    });
+    g.addEventListener('click',function(){pick(d.id);});
+    boxes.appendChild(g);
+  });
+
+  OUT.forEach(function(o){
+    var g=el('g',{class:"cv-out"});
+    g.appendChild(el('rect',{x:o.x,y:356,width:220,height:56,rx:7,fill:"#f2f5f8",stroke:"#dce4ec"}));
+    var t1=el('text',{class:"cv-outlabel",x:o.x+110,y:381,"text-anchor":"middle"}); t1.textContent=o.t;
+    var t2=el('text',{class:"cv-outsub",x:o.x+110,y:397,"text-anchor":"middle"}); t2.textContent=o.s;
+    g.appendChild(t1); g.appendChild(t2); outs.appendChild(g);
+  });
+
+  var panel=document.getElementById('convpanel'), cur=null;
+
+  function reset(){
+    cur=null;
+    [].forEach.call(boxes.children,function(g){g.classList.remove('dim','on');});
+    [].forEach.call(paths.children,function(p){p.classList.remove('dim','on');});
+    [].forEach.call(outs.children,function(g){g.classList.remove('dim');});
+    panel.innerHTML='<div class="cp-k">The reconciliation layer</div>'+
+      '<div class="cp-n">Nothing above is new to the district. The layer between them is.</div>'+
+      '<div class="cp-rows"><div class="cp-r"><div class="cp-rk">The problem</div>'+
+      '<p>Each domain currently reports upward on its own. Enrollment assumptions, staffing models, and compensation design can each be internally sound and still contradict one another by the time they reach a decision.</p></div>'+
+      '<div class="cp-r"><div class="cp-rk">The function</div>'+
+      '<p>One place holds them against each other first, which is also what makes questions like leadership readiness answerable, since no single domain contains enough of the picture to answer them alone.</p></div></div>';
+  }
+
+  function pick(id){
+    if(cur===id){reset();return;}
+    cur=id;
+    var d=D.filter(function(x){return x.id===id;})[0];
+    [].forEach.call(boxes.children,function(g){
+      var m=g.getAttribute('data-id')===id;
+      g.classList.toggle('on',m); g.classList.toggle('dim',!m);
+    });
+    [].forEach.call(paths.children,function(p){
+      if(p.classList.contains('cv-outpath')){p.classList.remove('dim');p.classList.add('on');return;}
+      var m=p.getAttribute('data-id')===id;
+      p.classList.toggle('on',m); p.classList.toggle('dim',!m);
+    });
+    [].forEach.call(outs.children,function(g){g.classList.remove('dim');});
+
+    var h='<div class="cp-k">Selected domain</div><div class="cp-n">'+d.label.join(' ')+'</div>'+
+      '<div class="cp-rows"><div class="cp-r"><div class="cp-rk">What it contributes</div><p>'+d.gives+'</p></div>'+
+      '<div class="cp-r"><div class="cp-rk">What it depends on</div><p>'+d.needs+'</p></div></div>';
+    h += d.href ? '<a class="cp-link" href="'+d.href+'">Open the deep dive →</a>'
+                : '<span class="cp-link" style="color:var(--ink-mute)">Section forthcoming</span>';
+    panel.innerHTML=h;
+  }
+
+  reset();
+})();
+</script>
 </body>
 </html>
