@@ -43,9 +43,31 @@
 .q{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:1.05rem 1.2rem;margin-bottom:.7rem}
 .q h5{font-size:13px;font-weight:700;color:var(--navy-deep);margin-bottom:.35rem}
 .q p{font-size:12.8px;color:var(--ink-soft);line-height:1.62}
+
+/* document pages: nav, hero, and body all share one measure so the page
+   reads as a single column instead of narrow text inside a wide frame.
+   Duplicated here so layout holds even if the shared stylesheet is cached. */
+.doc-page .wrap{max-width:860px}
+.doc-page .nav-in{max-width:860px}
+.doc-page .prose{max-width:none}
+.doc-page .prose p{font-size:15.5px;line-height:1.78}
+.doc-page .prose li{font-size:15px;line-height:1.72}
+.doc-page .prose p.lede{font-size:17px;line-height:1.7}
+.doc-page .hero h1{max-width:none}
+.doc-page .hero-sub{max-width:none}
+@media(max-width:900px){
+  .anat-g{grid-template-columns:repeat(3,1fr)}
+  .lvl{grid-template-columns:repeat(3,1fr)}
+  .comp{grid-template-columns:repeat(2,1fr)}
+  .cyc,.tl,.evid,.bands{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .anat-g,.lvl,.comp,.cyc,.tl,.evid,.bands{grid-template-columns:1fr}
+  .lane,.ind{grid-template-columns:1fr}
+}
 </style>
 </head>
-<body>
+<body class="doc-page">
 <a class="skip" href="#main">Skip to content</a>
 
 <nav class="nav">

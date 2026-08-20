@@ -10,8 +10,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* document pages: nav, hero, and body all share one measure so the page
+   reads as a single column instead of narrow text inside a wide frame.
+   Duplicated here so layout holds even if the shared stylesheet is cached. */
+.doc-page .wrap{max-width:860px}
+.doc-page .nav-in{max-width:860px}
+.doc-page .prose{max-width:none}
+.doc-page .prose p{font-size:15.5px;line-height:1.78}
+.doc-page .prose li{font-size:15px;line-height:1.72}
+.doc-page .prose p.lede{font-size:17px;line-height:1.7}
+.doc-page .hero h1{max-width:none}
+.doc-page .hero-sub{max-width:none}
+@media(max-width:900px){
+  .anat-g{grid-template-columns:repeat(3,1fr)}
+  .lvl{grid-template-columns:repeat(3,1fr)}
+  .comp{grid-template-columns:repeat(2,1fr)}
+  .cyc,.tl,.evid,.bands{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .anat-g,.lvl,.comp,.cyc,.tl,.evid,.bands{grid-template-columns:1fr}
+  .lane,.ind{grid-template-columns:1fr}
+}
+</style>
 </head>
-<body>
+<body class="doc-page">
 <a class="skip" href="#main">Skip to content</a>
 
 <nav class="nav">
