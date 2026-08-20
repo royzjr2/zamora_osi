@@ -24,7 +24,7 @@
   --cond:'Roboto Condensed',var(--sans);
   --disp:'Oswald',var(--cond);
 
-  --wrap:1080px;
+  --wrap:860px;
   --r:10px;
   --shadow:0 1px 2px rgba(0,40,69,.05),0 8px 24px rgba(0,40,69,.06);
 }
@@ -210,10 +210,7 @@ img{max-width:100%;display:block}
 
 
 /* ---------- DOCUMENT PAGES ----------
-   Deep dives share one measure across nav, hero, and body so the page reads
-   as a single column rather than narrow text inside a wide frame. */
-.doc-page .wrap{max-width:860px}
-.doc-page .nav-in{max-width:860px}
+   Width is global (--wrap). These rules only tune reading type on deep dives. */
 .doc-page .prose{max-width:none}
 .doc-page .prose p{font-size:15.5px;line-height:1.78}
 .doc-page .prose li{font-size:15px;line-height:1.72}
