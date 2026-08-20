@@ -123,7 +123,7 @@ img{max-width:100%;display:block}
 .principle p{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
 
 /* ---------- PROSE (deep dives) ---------- */
-.prose{max-width:70ch}
+.prose{max-width:none}
 .prose p{font-size:15.5px;line-height:1.78;color:var(--ink);margin-bottom:1.15rem}
 .prose p.lede{font-size:17px;color:var(--ink-soft);line-height:1.72}
 .prose h3{font-family:var(--disp);font-weight:600;font-size:21px;color:var(--navy-deep);margin:2.2rem 0 .85rem;line-height:1.25}
@@ -206,4 +206,25 @@ img{max-width:100%;display:block}
   body{background:#fff}
   .nav,.foot-conf{display:none}
   .hero{background:var(--navy-deep)}
+}
+
+
+/* ---------- DOCUMENT COLUMN ----------
+   Deep-dive pages use one shared measure so prose, tables, and
+   visuals all align to the same left and right edges. */
+.sec.doc .wrap{max-width:768px}
+.sec.doc .prose p{font-size:15px;line-height:1.8}
+.sec.doc .prose li{font-size:14.5px;line-height:1.75}
+.sec.doc .prose p.lede{font-size:16.5px;line-height:1.72}
+
+/* dense multi-column components collapse before they get cramped */
+@media(max-width:820px){
+  .anat-g{grid-template-columns:repeat(3,1fr)}
+  .lvl{grid-template-columns:repeat(3,1fr)}
+  .comp{grid-template-columns:repeat(2,1fr)}
+  .cyc,.tl,.evid,.bands{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .anat-g,.lvl,.comp,.cyc,.tl,.evid,.bands{grid-template-columns:1fr}
+  .lane,.ind{grid-template-columns:1fr}
 }
